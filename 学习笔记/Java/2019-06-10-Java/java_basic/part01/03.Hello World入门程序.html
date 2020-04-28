@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="本博客记录保存各种学习文档，主要是Java"><title>第一部分 第三章 Hello World入门程序 | foreverSFJ</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.1.2"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.1/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.1/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/2.1.4/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/2.1.4/toastr.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">第一部分 第三章 Hello World入门程序</h1><a id="logo" href="/.">foreverSFJ</a><p class="description">今夜月色真美，希望风也温柔~~</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/books/"><i class="fa fa-book"> 参考书</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">第一部分 第三章 Hello World入门程序</h1><div class="post-meta">2019-06-10<span> | </span><span class="category"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/">Java</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1.1k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 3</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-06-10-Java/java_basic/part01/03.Hello%20World%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F.html#vcomment"><span class="valine-comment-count" data-xid="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-06-10-Java/java_basic/part01/03.Hello%20World%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F.html"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-程序开发步骤说明"><span class="toc-text">3.1 程序开发步骤说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-编写Java源程序"><span class="toc-text">3.2 编写Java源程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-编译Java源文件"><span class="toc-text">3.3 编译Java源文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-运行Java程序"><span class="toc-text">3.4 运行Java程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-入门程序说明"><span class="toc-text">3.5 入门程序说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编译和运行是两回事"><span class="toc-text">编译和运行是两回事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于main方法"><span class="toc-text">关于main方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-添加注释comment"><span class="toc-text">3.6 添加注释comment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-关键字keywords"><span class="toc-text">3.7 关键字keywords</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-8-标识符"><span class="toc-text">3.8 标识符</span></a></li></ol></div></div><div class="post-content"><h2 id="3-1-程序开发步骤说明"><a href="#3-1-程序开发步骤说明" class="headerlink" title="3.1 程序开发步骤说明"></a>3.1 程序开发步骤说明</h2><p>开发环境已经搭建完毕，可以开发我们第一个Java程序了。</p>
+<p>Java程序开发三步骤：<strong>编写、编译、运行</strong>。</p>
+<p><img src="//cdn.foreversfj.com/image/blog/20190714/XNPwnbGqCqG5.jpg!blogy" alt=""></p>
+<h2 id="3-2-编写Java源程序"><a href="#3-2-编写Java源程序" class="headerlink" title="3.2 编写Java源程序"></a>3.2 编写Java源程序</h2><ol>
+<li><p>在<code>d:\day01</code>目录下新建文本文件，完整的文件名修改为<code>HelloWorld.java</code> ，其中文件名为<code>HelloWorld</code>，后缀名必须为<code>.java</code> 。</p>
+</li>
+<li><p>用记事本打开</p>
+<blockquote>
+<p>使用notepad++记事本软件。</p>
+</blockquote>
+</li>
+<li><p>在文件中键入文本并保存，代码如下：</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello World!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>文件名必须是<code>HelloWorld</code>，保证文件名和类的名字是一致的，注意大小写。<br>每个字母和符号必须与示例代码一模一样。</p>
+</blockquote>
+<p>&emsp;&emsp;第一个<code>HelloWord</code> 源程序就编写完成了，但是这个文件是程序员编写的，JVM是看不懂的，也就不能运行，因此我们必须将编写好的<code>Java源文件</code>编译成JVM可以看懂的<b>字节码文件</b>。</p>
+<h2 id="3-3-编译Java源文件"><a href="#3-3-编译Java源文件" class="headerlink" title="3.3 编译Java源文件"></a>3.3 编译Java源文件</h2><p>在DOS命令行中，<strong>进入Java源文件的目录</strong>，使用<code>javac</code>命令进行编译。</p>
+<p>命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac Java源文件名.后缀名</span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac HelloWorld.java</span><br></pre></td></tr></table></figure>
+
+<p><img src="//cdn.foreversfj.com/image/blog/20190714/h7EByLUFfgM2.jpg!blog" alt=""></p>
+<p>&emsp;&emsp;编译成功后，命令行没有任何提示。打开<code>d:\day01</code>目录，发现产生了一个新的文件<code>HelloWorld.class</code>，该文件就是编译后的文件，是Java的可运行文件，称为<strong>字节码文件</strong>，有了字节码文件，就可以运行程序了。</p>
+<blockquote>
+<p>Java源文件的编译工具<code>javac.exe</code>，在JDK安装目录的bin目录下。但是由于配置了环境变量，可以再任意目录下使用。</p>
+</blockquote>
+<h2 id="3-4-运行Java程序"><a href="#3-4-运行Java程序" class="headerlink" title="3.4 运行Java程序"></a>3.4 运行Java程序</h2><p>在DOS命令行中，<strong>进入Java源文件的目录</strong>，使用<code>java</code> 命令进行运行。</p>
+<p>命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java 类名字</span><br></pre></td></tr></table></figure>
+
+<p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java HelloWorld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>java HelloWord</strong> <code>不要写</code> <code>不要写</code> <code>不要写</code> .class</p>
+</blockquote>
+<p><img src="//cdn.foreversfj.com/image/blog/20190714/xwcoJK9cwAIu.jpg!blog" alt=""></p>
+<blockquote>
+<p>Java程序<code>.class文件</code>的运行工具<code>java.exe</code> ，在JDK安装目录的bin目录下。但是由于配置了环境变量，可以再任意目录下使用。</p>
+</blockquote>
+<h2 id="3-5-入门程序说明"><a href="#3-5-入门程序说明" class="headerlink" title="3.5 入门程序说明"></a>3.5 入门程序说明</h2><h3 id="编译和运行是两回事"><a href="#编译和运行是两回事" class="headerlink" title="编译和运行是两回事"></a>编译和运行是两回事</h3><ul>
+<li><strong>编译：</strong>是指将我们编写的Java源文件翻译成JVM认识的class文件，在这个过程中， <code>javac</code> 编译器会检查我们所写的程序是否有错误，有错误就会提示出来，如果没有错误就会编译成功。</li>
+<li><strong>运行：</strong>是指将<code>class文件</code> 交给JVM去运行，此时JVM就会去执行我们编写的程序了。</li>
+</ul>
+<h3 id="关于main方法"><a href="#关于main方法" class="headerlink" title="关于main方法"></a>关于main方法</h3><ul>
+<li><strong>main方法：</strong>称为主方法。写法是<strong>固定格式</strong>不可以更改。main方法是程序的入口点或起始点，无论我们编写多少程序，JVM在运行的时候，都会从main方法这里开始执行。</li>
+</ul>
+<h2 id="3-6-添加注释comment"><a href="#3-6-添加注释comment" class="headerlink" title="3.6 添加注释comment"></a>3.6 添加注释comment</h2><ul>
+<li><strong>注释：</strong>就是对代码的解释和说明。其目的是让人们能够更加轻松地了解代码。为代码添加注释，是十分必须要的，它不影响程序的编译和运行。</li>
+<li>Java中有单行注释和多行注释<ul>
+<li>单行注释以 //开头 换行结束</li>
+<li>多行注释以 /<em>开头 以</em>/结束</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-7-关键字keywords"><a href="#3-7-关键字keywords" class="headerlink" title="3.7 关键字keywords"></a>3.7 关键字keywords</h2><ul>
+<li><strong>关键字：</strong>是指在程序中，Java已经定义好的单词，具有特殊含义。<ul>
+<li>HelloWorld案例中，出现的关键字有<code>public</code> 、<code>class</code> 、 <code>static</code> 、 <code>void</code> 等，这些单词已经被Java定义好，全部都是小写字母，notepad++中颜色特殊。</li>
+<li>关键字比较多，不能死记硬背，学到哪里记到哪里即可。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-8-标识符"><a href="#3-8-标识符" class="headerlink" title="3.8 标识符"></a>3.8 标识符</h2><ul>
+<li><strong>标识符：</strong>是指在程序中，我们自己定义内容。比如类的名字、方法的名字和变量的名字等等，都是标识符。<ul>
+<li>HelloWorld案例中，出现的标识符有类名字<code>HelloWorld</code> 。</li>
+</ul>
+</li>
+<li><strong>命名规则： <code>硬性要求</code></strong><ul>
+<li>标识符可以包含<code>英文字母26个(区分大小写)</code>、<code>0-9数字</code> 、<code>$（美元符号）</code> 和<code>_（下划线）</code> 。</li>
+<li>标识符不能以数字开头。</li>
+<li>标识符不能是关键字。</li>
+</ul>
+</li>
+<li><strong>命名规范： <code>软性建议</code></strong><ul>
+<li>类名规范：首字母大写，后面每个单词首字母大写（大驼峰式）。</li>
+<li>变量名规范： 首字母小写，后面每个单词首字母大写（小驼峰式）。</li>
+<li>方法名规范：同变量名。</li>
+</ul>
+</li>
+</ul>
+</div><div id="donate"><link rel="stylesheet" type="text/css" href="/css/donate.css"><script type="text/javascript" src="/js/donate.js" successtext="复制成功!"></script><a class="pos-f tr3" id="github" href="https://github.com/Kaiyuan/donate-page" target="_blank" rel="noopener" arget="_blank" title="Github"></a><div id="DonateText">Donate</div><ul class="list pos-f" id="donateBox"><li id="AliPay" qr="/img/AliPayQR.jpg"></li><li id="WeChat" qr="/img/WeChatQR.png"></li></ul><div class="pos-f left-100" id="QRBox"><div id="MainBox"></div></div></div><div class="post-copyright"><script type="text/javascript" src="/js/copyright.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copyright.css"><p><span>本文标题：</span>第一部分 第三章 Hello World入门程序</p><p><span>文章作者：</span>foreverSFJ</p><p><span>发布时间：</span>2019-06-10</p><p><span>最后更新：</span>2020-03-01</p><p><span>原始链接：</span><a href="/学习笔记/Java/2019-06-10-Java/java_basic/part01/03.Hello World入门程序.html">https://blog.foreversfj.com/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-06-10-Java/java_basic/part01/03.Hello%20World%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F.html</a><span class="copy-path"><i class="fa fa-clipboard" data-clipboard-text="https://blog.foreversfj.com/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-06-10-Java/java_basic/part01/03.Hello%20World%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F.html"></i></span></p><p><span>版权声明：</span>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p></div><br><script type="text/javascript" src="/js/share.js?v=0.1.2" async></script><a class="article-share-link" data-url="https://blog.foreversfj.com/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-06-10-Java/java_basic/part01/03.Hello%20World%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F.html" data-id="ck9jv46u600bdjw7efow83bry" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAFQUlEQVR42u3aQW7jMBAEQP//09lrgI3p7hnaWWBLp8CRRbEkwMMePh7x8fXtePb53//9fs75W9/PefbJ+a6S0c9jPbvChQMfPnz48OELJjObUn7NluZ9b01y/adj4cOHDx8+fCO+5Cc/p9yUHfnjPBdV5zM3pRI+fPjw4cP3Sb7ookF5kaOcz3nf1fDhw4cPH75/hy/HzRfnyXeT+5k9Qnz48OHDh++TfPkSPW+cb5riM+hZ4fKhXgc+fPjw4cNXNpL/n78vH/jw4cOHD1/w85xvLMsLkf0yfr+RLr/mixHx4cOHDx++kUYelCfL9XaZvVqKj5oKbUD/4m7x4cOHDx++2CEvHdrp3UKZbU3L2+RtoPDDe4cPHz58+PCVo8yW2XnLfPP35kHOoooL7yA+fPjw4cM3Kl/OC+m8XJgVBMknsyJp0x744Qr48OHDhw9fzJc3g2exQvvJ3dFzuHb0qDuBDx8+fPjwlc3mdotYvu2sLU3agqMtoWYb5vDhw4cPH74NXx6+zwbbFB95ezsPJtoypShl8OHDhw8fvid8G6a8HJkt8lua9k35Wh/48OHDhw/fnm9W9cza3vlGtBlcvilt2JLHhw8fPnz4rvK1hUsb7rct7f0mubxIigogfPjw4cOHb8HXLuOTwWYRef4Y2gKlbc+/uHN8+PDhw4dvxDdrls842nKkbRJsQpA6qsCHDx8+fPhGKXceYbfn55OcBQf54z/fyewB4MOHDx8+fC3fpuHdEs8a2+2d1O9OHFgUJQs+fPjw4cM36vbmN/GOx9CWGnnze9N4ePoO4sOHDx8+fCVfvsxum9mza+5j+vZo7xMfPnz48OGb8e0HaxfbefGRT7JtjbeBAj58+PDhw/cOvlkZkUQDs9udbS+bLf7bCAMfPnz48OGb8bWlxizg3tAk02i/9cawHh8+fPjw4QvWvPlU28i+XXjn4fsnQ/8X18SHDx8+fPgCjX14vdleNgvr8/KlDRTa0fHhw4cPH74Z363i4NbWtFkQkINuXohH++Tx4cOHDx++dUGQt6jPD6MNCGYL+/xx7tsM+PDhw4cPX5I25z/YeQmST/XWmW2R1EYG+PDhw4cP3y2+tsjIQ4e7V5g1tmcthOh1wYcPHz58+Eq+zTI+LyAS1llj+1ZB075GF1IQfPjw4cOH73hqMvCs7Z1P7FbRswnrXxQu+PDhw4cP35EvHzjfLta23tv/zhr5yavQRhX48OHDhw9fyzfDmoXgX+tjtj1udn7RSseHDx8+fPhGfLPIvo3aZ9vFktH3LYdHfPxQuODDhw8fPnzdWNHE8sE2m8DaMmVTsrQtgRcC+PDhw4cP3/EON03oZIC8Ed62AYpdAGWJUxQr+PDhw4cP34JvE9bnbe/ZVrZ2rFlYXz9afPjw4cOHb1IV1GF3MvCmMMo/yeP4fWuhyFrw4cOHDx++EV+75G6LhiRumIUCt0qWYr748OHDhw9fwJcXBPtbvxXrzx7MuWAaliz48OHDhw/fiC+/XB7W3/rWJjhYhe9JoYYPHz58+PCt+fIFfLI43wQN7cPYBw11YIEPHz58+PDdzLof+c3NIoZZo30TCmzuJ3+Z8OHDhw8fvjNfS9AWNLNbzxvqs/eljebx4cOHDx++u3z5D/lm2i1rW1TlLYHZiPjw4cOHD99v8eUFQRvZbwqpvInehgtP54UPHz58+PB9hG+GuP98M1beTiheC3z48OHDh2/ElxQKbYiQLL/bgL5tn28a5NHc8eHDhw8fvpKvnWoycL6kzznaOGAT5bdBCT58+PDhwxeM+wfkDJwLO/37NgAAAABJRU5ErkJggg==">分享</a><div class="tags"><a href="/tags/java/"><i class="fa fa-tag"></i>java</a></div><div class="post-nav"><a class="pre" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-06-10-Java/java_basic/part01/04.%E5%B8%B8%E9%87%8F.html">第一部分 第四章 常量</a><a class="next" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-06-10-Java/java_basic/part01/02.Java%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html">第一部分 第二章 Java语言开发环境搭建</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'JPpd1lfY9RKkf3j8CbuIxE9z-gzGzoHsz',
+  appKey:'51NBVjzxloF9vXv6aWJmAXB9',
+  placeholder:'天气真热啊！！！',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'8'
+})
+</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-diamond"> 其他项目</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">169</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/">Java</a><span class="category-list-count">145</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A8%A1%E5%9E%8B/">模型</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E8%83%BD/">技能</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/">课程学习</a><span class="category-list-count">6</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Bootstrap/" style="font-size: 15px;">Bootstrap</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/jeesite/" style="font-size: 15px;">jeesite</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/%E7%AE%A1%E7%90%86%E7%BB%9F%E8%AE%A1%E5%AD%A6/" style="font-size: 15px;">管理统计学</a> <a href="/tags/JavaWeb/" style="font-size: 15px;">JavaWeb</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/XML/" style="font-size: 15px;">XML</a> <a href="/tags/Tomcat/" style="font-size: 15px;">Tomcat</a> <a href="/tags/Servlet/" style="font-size: 15px;">Servlet</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/Request/" style="font-size: 15px;">Request</a> <a href="/tags/JQuery/" style="font-size: 15px;">JQuery</a> <a href="/tags/%E6%8A%80%E8%83%BD/" style="font-size: 15px;">技能</a> <a href="/tags/java-API/" style="font-size: 15px;">java, API</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/2020-04-27-Hibernate/%E5%8D%95%E5%90%91%E5%A4%9A%E5%AF%B9%E4%B8%80%E7%9A%84%E5%85%B3%E8%81%94%E6%98%A0%E5%B0%84.html">Hibernate单向多对一的关联映射</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-28-Java/JavaWeb/14_3%20Redis%E5%B7%A5%E5%85%B7.html">第四部分 第十四章 3.Redis工具</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-28-Java/JavaWeb/14_2%20Redis%E4%BD%BF%E7%94%A8.html">第四部分 第十四章 2.Redis使用</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-28-Java/JavaWeb/14_1%20Redis%E5%85%A5%E9%97%A8.html">第四部分 第十四章 1.Redis</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-28-Java/JavaWeb/13_2%20JSON.html">第四部分 第十三章 2.JSON</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-28-Java/JavaWeb/13_1%20AJAX.html">第四部分 第十三章 1.AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-27-Java/JavaWeb/12_4%20JQuery%E6%A1%88%E4%BE%8B.html">第四部分 第十二章 4.案例</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-27-Java/JavaWeb/12_3%20JQuery%20%E9%AB%98%E7%BA%A7.html">第四部分 第十二章 3.JQuery 高级</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-27-Java/JavaWeb/12_2%20DOM%E6%93%8D%E4%BD%9C.html">第四部分 第十二章 2.DOM操作</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-27-Java/JavaWeb/12_1%20JQuery%20%E5%9F%BA%E7%A1%80.html">第四部分 第十二章 1.JQuery 基础</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.haomwei.com/technology/maupassant-hexo.html" title="屠夫9441的博客" target="_blank">屠夫9441的博客</a><ul></ul><a href="https://github.com/foreverSFJ/Blog" title="github.com/foreverSFJ/" target="_blank">github.com/foreverSFJ/</a><ul></ul><a href="https://www.nickyam.com/" title="Nick Yam" target="_blank">Nick Yam</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">foreverSFJ | </a><a rel="nofollow" target="_blank" href="http://beian.miit.gov.cn"> 鄂ICP备 19017407号-1 </a> |&nbsp;<img class="nofancybox" src="//cdn.foreversfj.com/image/blog/20190728/N0BTF6mJ1Ilb.png" style="margin-bottom: -4px;"/><a rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102003450">&nbsp;鄂公网安备 42011102003450号</a><br/><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>var now = new Date();
+function createtime() {
+var grt= new Date("07/09/2018 12:49:00");
+now.setTime(now.getTime()+250);
+days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+document.getElementById("timeDate").innerHTML = "运行 "+dnum+" 天 ";
+document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+}
+setInterval("createtime()",250);</script><br/><div><div class="github-badge" style="margin-right: 3px;"><a href="https://hexo.io" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hexo</span></a></div><div class="github-badge"><a href="https://github.com/tufu9441/maupassant-hexo" target="_black" rel="nofollow"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a></div></div></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.1.2" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.1.2" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=0.1.2"><script type="text/javascript" src="/js/search.js?v=0.1.2"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="100,99,98" opacity="0.7" zIndex="-1" count="99" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/love.js"></script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.1.2"></script><script type="text/javascript" src="/js/smartresize.js?v=0.1.2"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
