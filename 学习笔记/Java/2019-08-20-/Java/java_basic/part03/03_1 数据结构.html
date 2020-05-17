@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="本博客记录保存各种学习文档，主要是Java"><title>第三部分 第三章 1.数据结构 | foreverSFJ</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.1.2"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.1/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.1/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/2.0.4/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/2.1.4/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/2.1.4/toastr.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">第三部分 第三章 1.数据结构</h1><a id="logo" href="/.">foreverSFJ</a><p class="description">今夜月色真美，希望风也温柔~~</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/books/"><i class="fa fa-book"> 参考书</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">第三部分 第三章 1.数据结构</h1><div class="post-meta">2019-08-20<span> | </span><span class="category"><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/">Java</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1.7k</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 5</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-20-/Java/java_basic/part03/03_1%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html#vcomment"><span class="valine-comment-count" data-xid="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-20-/Java/java_basic/part03/03_1%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-数据结构"><span class="toc-text">3.1 数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-1-数据结构有什么用？"><span class="toc-text">3.1.1 数据结构有什么用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-2-常见的数据结构"><span class="toc-text">3.1.2 常见的数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-1-栈"><span class="toc-text">3.1.2.1 栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-2-队列"><span class="toc-text">3.1.2.2 队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-3-数组"><span class="toc-text">3.1.2.3 数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-4-链表"><span class="toc-text">3.1.2.4 链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单向链表"><span class="toc-text">单向链表</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-5-红黑树"><span class="toc-text">3.1.2.5 红黑树</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><h1 id="3-1-数据结构"><a href="#3-1-数据结构" class="headerlink" title="3.1 数据结构"></a>3.1 数据结构</h1><h2 id="3-1-1-数据结构有什么用？"><a href="#3-1-1-数据结构有什么用？" class="headerlink" title="3.1.1 数据结构有什么用？"></a>3.1.1 数据结构有什么用？</h2><p>&emsp;&emsp;当你用着java里面的容器类很爽的时候，你有没有想过，怎么ArrayList就像一个无限扩充的数组，也好像链表之类的。好用吗？好用，这就是数据结构的用处，只不过你在不知不觉中使用了。</p>
+<p>&emsp;&emsp;现实世界的存储，我们使用的工具和建模。每种数据结构有自己的优点和缺点，想想如果Google的数据用的是数组的存储，我们还能方便地查询到所需要的数据吗？而算法，在这么多的数据中如何做到最快的插入，查找，删除，也是在追求更快。</p>
+<p>&emsp;&emsp;java是面向对象的语言，就好似自动档轿车，C语言好似手动档吉普。数据结构呢？是变速箱的工作原理。你完全可以不知道变速箱怎样工作，就把自动档的车子从 A点 开到 B点，而且未必就比懂得的人慢。写程序这件事，和开车一样，经验可以起到很大作用，但如果你不知道底层是怎么工作的，就永远只能开车，既不会修车，也不能造车。当然了，数据结构内容比较多，细细的学起来也是相对费功夫的，不可能达到一蹴而就。我们将常见的数据结构：堆栈、队列、数组、链表和红黑树 这几种给大家介绍一下，作为数据结构的入门，了解一下它们的特点即可。</p>
+<p><img src="//cdn.foreversfj.com/image/blog/20190824/9PBQOhbEmRNs.jpg!blog" alt=""></p>
+<h2 id="3-1-2-常见的数据结构"><a href="#3-1-2-常见的数据结构" class="headerlink" title="3.1.2 常见的数据结构"></a>3.1.2 常见的数据结构</h2><p>&emsp;&emsp;数据存储的常用结构有：栈、队列、数组、链表和红黑树。</p>
+<h3 id="3-1-2-1-栈"><a href="#3-1-2-1-栈" class="headerlink" title="3.1.2.1 栈"></a>3.1.2.1 栈</h3><ul>
+<li><strong>栈</strong>：<code>stack</code>，又称堆栈，它是运算受限的线性表，其限制是仅允许在标的一端进行插入和删除操作，不允许在其他任何位置进行添加、查找、删除等操作。</li>
+</ul>
+<p>&emsp;&emsp;简单的说：采用该结构的集合，对元素的存取有如下的特点</p>
+<ul>
+<li><p><strong>先进后出</strong>（即，存进去的元素，要在后它后面的元素依次取出后，才能取出该元素）。例如，子弹压进弹夹，先压进去的子弹在下面，后压进去的子弹在上面，当开枪时，先弹出上面的子弹，然后才能弹出下面的子弹。</p>
+</li>
+<li><p>栈的入口、出口的都是栈的顶端位置。</p>
+<p><img src="//cdn.foreversfj.com/image/blog/20190824/Y6WzJnm2HItz.png!blog" alt=""></p>
+</li>
+</ul>
+<p>这里两个名词需要注意：</p>
+<ul>
+<li><strong>压栈</strong>：就是存元素。即，把元素存储到栈的顶端位置，栈中已有元素依次向栈底方向移动一个位置。</li>
+<li><strong>弹栈</strong>：就是取元素。即，把栈的顶端位置元素取出，栈中已有元素依次向栈顶方向移动一个位置。</li>
+</ul>
+<h3 id="3-1-2-2-队列"><a href="#3-1-2-2-队列" class="headerlink" title="3.1.2.2 队列"></a>3.1.2.2 队列</h3><ul>
+<li><strong>队列</strong>：<code>queue</code>,简称队，它同堆栈一样，也是一种运算受限的线性表，其限制是仅允许在表的一端进行插入，而在表的另一端进行删除。</li>
+</ul>
+<p>简单的说，采用该结构的集合，对元素的存取有如下的特点：</p>
+<ul>
+<li><strong>先进先出</strong>（即，存进去的元素，要在后它前面的元素依次取出后，才能取出该元素）。例如，小火车过山洞，车头先进去，车尾后进去；车头先出来，车尾后出来。</li>
+<li>队列的入口、出口各占一侧。例如，下图中的左侧为入口，右侧为出口。</li>
+</ul>
+<p><img src="//cdn.foreversfj.com/image/blog/20190824/aoVDkH2gd0GN.bmp" alt=""></p>
+<h3 id="3-1-2-3-数组"><a href="#3-1-2-3-数组" class="headerlink" title="3.1.2.3 数组"></a>3.1.2.3 数组</h3><ul>
+<li><strong>数组</strong>:<code>Array</code>,是有序的元素序列，数组是在内存中开辟一段连续的空间，并在此空间存放元素。就像是一排出租屋，有100个房间，从001到100每个房间都有固定编号，通过编号就可以快速找到租房子的人。</li>
+</ul>
+<p>简单的说,采用该结构的集合，对元素的存取有如下的特点：</p>
+<ul>
+<li><p>查找元素快：通过索引，可以快速访问指定位置的元素</p>
+<p> <img src="//cdn.foreversfj.com/image/blog/20190824/5n18wvDm2hfu.png!blog" alt=""></p>
+</li>
+<li><p>增删元素慢</p>
+<ul>
+<li><strong>指定索引位置增加元素</strong>：需要创建一个新数组，将指定新元素存储在指定索引位置，再把原数组元素根据索引，复制到新数组对应索引的位置。如下图<img src="img/%E6%95%B0%E7%BB%84%E6%B7%BB%E5%8A%A0.png!blog" alt=""></li>
+<li><strong>指定索引位置删除元素：</strong>需要创建一个新数组，把原数组元素根据索引，复制到新数组对应索引的位置，原数组中指定索引位置元素不复制到新数组中。如下图<img src="img/%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4.png!blog" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-2-4-链表"><a href="#3-1-2-4-链表" class="headerlink" title="3.1.2.4 链表"></a>3.1.2.4 链表</h3><ul>
+<li><strong>链表</strong>:<code>linked list</code>,由一系列结点node（链表中每一个元素称为结点）组成，结点可以在运行时i动态生成。每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域。我们常说的链表结构有<strong>单向链表与双向链表。</strong></li>
+</ul>
+<h4 id="单向链表"><a href="#单向链表" class="headerlink" title="单向链表"></a>单向链表</h4><p><img src="//cdn.foreversfj.com/image/blog/20190824/sGPOSwhpKYVf.png!blog" alt=""></p>
+<p>简单的说，采用该结构的集合，对元素的存取有如下的特点：</p>
+<ul>
+<li><p>多个结点之间，通过地址进行连接。例如，多个人手拉手，每个人使用自己的右手拉住下个人的左手，依次类推，这样多个人就连在一起了。</p>
+<p><img src="//cdn.foreversfj.com/image/blog/20190824/5cD8rWFejCNa.png!blog" alt=""></p>
+</li>
+<li><p>查找元素慢：想查找某个元素，需要通过连接的节点，依次向后查找指定元素</p>
+</li>
+<li><p>增删元素快：</p>
+<ul>
+<li><p>增加元素：只需要修改连接下个元素的地址即可。</p>
+<p><img src="//cdn.foreversfj.com/image/blog/20190824/uk6yvucAlJFY.png!blog" alt=""></p>
+</li>
+<li><p>删除元素：只需要修改连接下个元素的地址即可。</p>
+<p><img src="//cdn.foreversfj.com/image/blog/20190824/S2XQmaarJeIj.bmp!blog" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-2-5-红黑树"><a href="#3-1-2-5-红黑树" class="headerlink" title="3.1.2.5 红黑树"></a>3.1.2.5 红黑树</h3><ul>
+<li><strong>二叉树</strong>：<code>binary tree</code>,是每个结点不超过2的有序<strong>树（tree）</strong> 。</li>
+</ul>
+<p>简单的理解，就是一种类似于我们生活中树的结构，只不过每个结点上都最多只能有两个子结点。</p>
+<p>二叉树是每个节点最多有两个子树的树结构。顶上的叫根结点，两边被称作“左子树”和“右子树”。</p>
+<p>如图：</p>
+<p><img src="//cdn.foreversfj.com/image/blog/20190824/BP50T241zhCe.bmp!blog" alt=""></p>
+<p>&emsp;&emsp;我们要说的是二叉树的一种比较有意思的叫做<strong>红黑树</strong>，红黑树本身就是一颗二叉查找树，将节点插入后，该树仍然是一颗二叉查找树。也就意味着，树的键值仍然是有序的。</p>
+<p>红黑树的约束:</p>
+<ol>
+<li>节点可以是红色的或者黑色的</li>
+</ol>
+<ol start="2">
+<li>根节点是黑色的</li>
+</ol>
+<ol start="3">
+<li>叶子节点(特指空节点)是黑色的</li>
+<li>每个红色节点的子节点都是黑色的</li>
+<li>任何一个节点到其每一个叶子节点的所有路径上黑色节点数相同</li>
+</ol>
+<p>红黑树的特点:<br>&emsp;&emsp;<em>速度特别快，趋近平衡树，查找叶子元素最少和最多次数不多于二倍</em></p>
+</div><div id="donate"><link rel="stylesheet" type="text/css" href="/css/donate.css"><script type="text/javascript" src="/js/donate.js" successtext="复制成功!"></script><a class="pos-f tr3" id="github" href="https://github.com/Kaiyuan/donate-page" target="_blank" rel="noopener" arget="_blank" title="Github"></a><div id="DonateText">Donate</div><ul class="list pos-f" id="donateBox"><li id="AliPay" qr="/img/AliPayQR.jpg"></li><li id="WeChat" qr="/img/WeChatQR.png"></li></ul><div class="pos-f left-100" id="QRBox"><div id="MainBox"></div></div></div><div class="post-copyright"><script type="text/javascript" src="/js/copyright.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copyright.css"><p><span>本文标题：</span>第三部分 第三章 1.数据结构</p><p><span>文章作者：</span>foreverSFJ</p><p><span>发布时间：</span>2019-08-20</p><p><span>最后更新：</span>2020-05-17</p><p><span>原始链接：</span><a href="/学习笔记/Java/2019-08-20-/Java/java_basic/part03/03_1 数据结构.html">https://blog.foreversfj.com/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-20-/Java/java_basic/part03/03_1%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</a><span class="copy-path"><i class="fa fa-clipboard" data-clipboard-text="https://blog.foreversfj.com/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-20-/Java/java_basic/part03/03_1%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html"></i></span></p><p><span>版权声明：</span>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p></div><br><script type="text/javascript" src="/js/share.js?v=0.1.2" async></script><a class="article-share-link" data-url="https://blog.foreversfj.com/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-20-/Java/java_basic/part03/03_1%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html" data-id="ckaapuj2s00ierg7e9dl26fio" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAFR0lEQVR42u3c227bSBAEUP//T3tfs3AkV1XTQYAcPgkyLzOHAthTTfjjI94+v2xfv//1m1dHvd9enbMdVXLU5Qz1hg8fPnz48L0dxMb09XN7bDLJfNrv55KM8L0JPnz48OHDd+FLJlCfOi56ksJlK3RarNwEHz58+PDh+zN874G2cuTVJO/FzVZC4cOHDx8+fH8b3z2+T25MErj/RPSADx8+fPjw/TRfEtbfg4a86Nna5/dQ/gd7Hfjw4cOHD99UKPwLnx/e8OHDhw8fvuDxnBQx+SM/OTYJ8fNW91ZyFRr48OHDhw/fohE9sHOIdoF9WooHZ8jHNo4WHz58+PDhi6+Vlw7t0vonUPKbl6NsV/loKy98+PDhw4dvajC3R73f86lXxz4P22OI+PDhw4cP35nvEpe/vwEXlFOwfr4BL38o+PDhw4cPX8CXFytbfNCWO+1V7vtsjfbTqfHhw4cP3z/P1zaYtz3bwiW5GW0psx31TUyADx8+fPjwTXx5Y3sbdH7sVgBd2gN5TP+byAAfPnz48OHrPhf/NnrsAwQR+Tb5vKBJiq02vseHDx8+fPg2vkvruoXI44a6gCjHnL8qF91yfPjw4cOHL+BLOJ6KyLeS4iPY2lb91kj4puLDhw8fPnz4Yr58iPkDPj9DXo4kxU2754UYHz58+PDhu/NtRczWYm+523FuoEUjHx8+fPjw4Zv4kuX9ZfL5+e9xQNJuz+OP4tU0fPjw4cOH78DXLrm3hnQS2bdXbEuW9mbjw4cPHz58z/JtEUAbfD/16lgyzrwlkN/m/4X1+PDhw4cPX8x3aYTnKO302gkk12oDi6R0w4cPHz58+Fq+rVjZSpa2UGgn1l6rve5v5oUPHz58+PCVfJfwPS8OtlImb1dfKO/NBnz48OHDh2/j26LtNuBuJ3YPFPIiKbnuy8IFHz58+PDhK0eeP8i3sqOdRlvitNFA8lpeMSp8+PDhw4cv0Gibx22buZ3qJaxvY4uPw4YPHz58+PDd2+RbIZLH8W0BlAQBbZGU/FzyPfHhw4cPH76W7xLQ59O7NKefarcnIciYuODDhw8fPnxl2nw56SX+TojfnzMvifICqCjg8OHDhw8fvmnt3y6nLwvyp5riWwSf0Ndjw4cPHz58+Jax1S9hb6+OJbjvC5GtMLq0yYu+Bz58+PDhwzfxXZrleby+NbDbcOHezo9uFT58+PDhw7f0oz/yQmErHdriIAnit2Z/G+7jw4cPHz58T/Hl4XWbVOfHJiXO9rto44YHfmv48OHDhw9f3CD/jLd727uN77fi41I2fXM2fPjw4cOHb+Jrl9BbdL4tyNtb297U/JU1fPjw4cOH786XH3Bf9reL9vvNawug5K8v3y/Ahw8fPnz4Sr6N7L5Ez19Qa6/1bLP85ff48OHDhw/flH63y+ltkZ8XTO2tahvz9yY9Pnz48OHDd+fLo4F82Z/H33kZsQUZ72exgeLDhw8fPnw5Xz6lnKZd6j91xaQwavf8JkbBhw8fPnz4Jr7t0X555G/tgadebmvLtZdjwIcPHz58+M58CUFe+rQR/NYCb8+2XfdlZIAPHz58+PDFfO2jur3wNqA2sm+Lqrwkurfk8eHDhw8fvq/nGfvqh4Z6GwRsDftLyVX8FR8+fPjw4Zv42gf5pWV+vz1J8fETV8SHDx8+fPj+Br5LVpG/JNc2y7eYIJ8LPnz48OHD92f4Nuh2z3tz+h43JGfDhw8fPnz4Nr4krB8f7fEk2+s+WySN++DDhw8fPnzLPuMkL9+/b5+3oX/7Kls7huQ8+PDhw4cP39vR/gdWnsTU2Od1GAAAAABJRU5ErkJggg==">分享</a><div class="tags"><a href="/tags/java/"><i class="fa fa-tag"></i>java</a></div><div class="post-nav"><a class="pre" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-20-/Java/java_basic/part03/03_2%20List%E9%9B%86%E5%90%88.html">第三部分 第三章 2.List集合</a><a class="next" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2019-08-20-/Java/java_basic/part03/02_4%20%E9%9B%86%E5%90%88%E7%9A%84%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B.html">第三部分 第二章 4.集合的综合案例</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'JPpd1lfY9RKkf3j8CbuIxE9z-gzGzoHsz',
+  appKey:'51NBVjzxloF9vXv6aWJmAXB9',
+  placeholder:'天气真热啊！！！',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'8'
+})
+</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-diamond"> 其他项目</i></div><ul><a href="//novel.foreversfj.com" title="在线小说阅读" target="_blank">在线小说阅读</a></ul><ul><a href="//share.foreversfj.com" title="知识笔记" target="_blank">知识笔记</a></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">187</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/">Java</a><span class="category-list-count">155</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A8%A1%E5%9E%8B/">模型</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E8%83%BD/">技能</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/">课程学习</a><span class="category-list-count">6</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Bootstrap/" style="font-size: 15px;">Bootstrap</a> <a href="/tags/Hibernate/" style="font-size: 15px;">Hibernate</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/jeesite/" style="font-size: 15px;">jeesite</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Maven/" style="font-size: 15px;">Maven</a> <a href="/tags/MySQL/" style="font-size: 15px;">MySQL</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/%E7%AE%A1%E7%90%86%E7%BB%9F%E8%AE%A1%E5%AD%A6/" style="font-size: 15px;">管理统计学</a> <a href="/tags/JavaWeb/" style="font-size: 15px;">JavaWeb</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/XML/" style="font-size: 15px;">XML</a> <a href="/tags/Tomcat/" style="font-size: 15px;">Tomcat</a> <a href="/tags/Servlet/" style="font-size: 15px;">Servlet</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/Request/" style="font-size: 15px;">Request</a> <a href="/tags/JQuery/" style="font-size: 15px;">JQuery</a> <a href="/tags/%E6%8A%80%E8%83%BD/" style="font-size: 15px;">技能</a> <a href="/tags/API/" style="font-size: 15px;">API</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/2020-05-17-/Mybatis/03_04%20%E8%87%AA%E5%AE%9A%E4%B9%89Mybatis%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E8%AF%B4%E6%98%8E.html">第三章 第4节 自定义Mybatis的设计模式说明</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/2020-05-17-/Mybatis/03_03%20%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%AE%9A%E4%B9%89.html">第三章 第3节 基于注解方式定义Mybatis框架</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/2020-05-17-/Mybatis/03_02%20%E5%9F%BA%E4%BA%8EXML%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89.html">第三章 第2节 基于XML的自定义mybatis框架</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/2020-05-17-/Mybatis/03_01%20%E8%87%AA%E5%AE%9A%E4%B9%89Mybatis%E6%A1%86%E6%9E%B6.html">第三章 第1节 自定义Mybatis框架</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%A1%86%E6%9E%B6/2020-05-17-/Mybatis/02_03%20%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84Mybatis%E4%BD%BF%E7%94%A8.html">第二章 Mybatis入门 第3节 基于注解的Mybatis使用</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2020-05-17-/Maven/05_Maven%E6%80%BB%E7%BB%93.html">第5章 Maven总结</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2020-05-17-/Maven/04_Maven%E5%B7%A5%E7%A8%8B%E7%9A%84%E8%BF%90%E8%A1%8C%E8%B0%83%E8%AF%95.html">第4章 maven工程运行调试</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2020-05-17-/Maven/03_3_Maven%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">第3章 第二节 maven项目搭建Web构架</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2020-05-17-/Maven/03_2_Maven%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">第3章 第二节 idea开发maven项目</a></li><li class="post-list-item"><a class="post-list-link" href="/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java/2020-05-17-/Maven/03_1_Maven%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html">第3章 第一节 Maven常用命令</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.haomwei.com/technology/maupassant-hexo.html" title="屠夫9441的博客" target="_blank">屠夫9441的博客</a><ul></ul><a href="https://github.com/foreverSFJ/Blog" title="github.com/foreverSFJ/" target="_blank">github.com/foreverSFJ/</a><ul></ul><a href="https://www.nickyam.com/" title="Nick Yam" target="_blank">Nick Yam</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">foreverSFJ | </a><a rel="nofollow" target="_blank" href="http://beian.miit.gov.cn"> 鄂ICP备 19017407号-1 </a> |&nbsp;<img class="nofancybox" src="//cdn.foreversfj.com/image/blog/20190728/N0BTF6mJ1Ilb.png" style="margin-bottom: -4px;"/><a rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102003450">&nbsp;鄂公网安备 42011102003450号</a><br/><span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span><script>var now = new Date();
+function createtime() {
+var grt= new Date("07/09/2018 12:49:00");
+now.setTime(now.getTime()+250);
+days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+document.getElementById("timeDate").innerHTML = "运行 "+dnum+" 天 ";
+document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+}
+setInterval("createtime()",250);</script><br/><div><div class="github-badge" style="margin-right: 3px;"><a href="https://hexo.io" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hexo</span></a></div><div class="github-badge"><a href="https://github.com/tufu9441/maupassant-hexo" target="_black" rel="nofollow"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a></div></div></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.1.2" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.1.2" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=0.1.2"><script type="text/javascript" src="/js/search.js?v=0.1.2"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="100,99,98" opacity="0.7" zIndex="-1" count="99" src="//lib.baomitu.com/canvas-nest.js/2.0.4/canvas-nest.umd.js"></script><script type="text/javascript" src="/js/love.js"></script><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.1.2"></script><script type="text/javascript" src="/js/smartresize.js?v=0.1.2"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
